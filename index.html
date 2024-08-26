@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script src="/script/script.js" type="module"></script>
+  <script src="/script/minesweeper.js"></script>
+  <link rel="icon" type="image/png" href="/img/bomb_icon.png">
+  <title>Minesweeper</title>
+</head>
+<body>
+  <div id="buttonBox">
+    <button data-modal-target="#modal" id="openbtn">?</button>
+    <button  onclick="window.location.reload()" class="restart">restart</button>
+  </div>
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <div class="title1">Game info</div>
+        <button data-close-button class="close-button">&times;</button>
+      </div>
+      <div class="modal-body">
+        The Minesweeper game begins with a blank square grid. When you click one of the squares, it disappears, 
+        while the others remain blank or have numbers on them. 
+        You must use the numbers to figure out which empty squares contain mine and which are safe to click on.
+        <br><br>
+        Minesweeper can only be played with the mouse. Use the left and right mouse buttons to navigate. 
+        Non-mined squares are clicked with the left mouse button, while mined squares are flagged with the right mouse button.
+        <br><br>
+        Click "x" or outside the info window to continue to game.
+      </div>
+    </div>
+    <div id="overlay"></div>
+    <script src="/script/popUp.js"></script>
+  <h3 class="title">Minesweeper</h3>
+  <div class="subtext">
+    Mines Left: <span data-mine-count></span>
+  </div>
+  <div class="board"></div>
+</body>
+</html>
